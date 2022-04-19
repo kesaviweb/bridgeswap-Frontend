@@ -12,9 +12,12 @@ import {
   getBunnyFactoryAddress,
   getBunnySpecialAddress,
   getCakeAddress,
+  getBRISAddress,
   getLotteryAddress,
+  getNewLotteryAddress,
   getLotteryTicketAddress,
   getLotteryV2Address,
+  getReferralAddress,
   getMasterChefAddress,
   getPointCenterIfoAddress,
   getClaimRefundAddress,
@@ -34,12 +37,15 @@ import bep20Abi from 'config/abi/erc20.json'
 import erc721Abi from 'config/abi/erc721.json'
 import lpTokenAbi from 'config/abi/lpToken.json'
 import cakeAbi from 'config/abi/cake.json'
+import BRISAbi from 'config/abi/bris.json'
 import ifoV1Abi from 'config/abi/ifoV1.json'
 import ifoV2Abi from 'config/abi/ifoV2.json'
 import pointCenterIfo from 'config/abi/pointCenterIfo.json'
 import lotteryAbi from 'config/abi/lottery.json'
+import newlotteryAbi from 'config/abi/newlottery.json'
 import lotteryTicketAbi from 'config/abi/lotteryNft.json'
 import lotteryV2Abi from 'config/abi/lotteryV2.json'
+import referralAbi from 'config/abi/referral.json'
 import masterChef from 'config/abi/masterchef.json'
 import sousChef from 'config/abi/sousChef.json'
 import sousChefV2 from 'config/abi/sousChefV2.json'
@@ -100,6 +106,9 @@ export const getPointCenterIfoContract = (web3?: Web3) => {
 export const getCakeContract = (web3?: Web3) => {
   return getContract(cakeAbi, getCakeAddress(), web3)
 }
+export const getBRISContract = (web3?: Web3) => {
+  return getContract(BRISAbi, getBRISAddress(), web3)
+}
 export const getProfileContract = (web3?: Web3) => {
   return getContract(profileABI, getPancakeProfileAddress(), web3)
 }
@@ -115,11 +124,17 @@ export const getBunnySpecialContract = (web3?: Web3) => {
 export const getLotteryContract = (web3?: Web3) => {
   return getContract(lotteryAbi, getLotteryAddress(), web3)
 }
+export const getNewLotteryContract = (web3?: Web3) => {
+  return getContract(newlotteryAbi, getNewLotteryAddress(), web3)
+}
 export const getLotteryTicketContract = (web3?: Web3) => {
   return getContract(lotteryTicketAbi, getLotteryTicketAddress(), web3)
 }
 export const getLotteryV2Contract = (web3?: Web3) => {
   return getContract(lotteryV2Abi, getLotteryV2Address(), web3)
+}
+export const getReferralContract = (web3?: Web3) => {
+  return getContract(referralAbi, getReferralAddress(), web3)
 }
 export const getMasterchefContract = (web3?: Web3) => {
   return getContract(masterChef, getMasterChefAddress(), web3)

@@ -11,6 +11,9 @@ export const getAddress = (address: Address): string => {
 export const getCakeAddress = () => {
   return getAddress(tokens.bris.address)
 }
+export const getBRISAddress = () => {
+  return getAddress(tokens.bris.address)
+}
 export const getMasterChefAddress = () => {
   return getAddress(addresses.masterChef)
 }
@@ -23,11 +26,18 @@ export const getWbnbAddress = () => {
 export const getLotteryAddress = () => {
   return getAddress(addresses.lottery)
 }
+
+export const getNewLotteryAddress = () => {
+  return getAddress(addresses.newlottery)
+}
 export const getLotteryTicketAddress = () => {
   return getAddress(addresses.lotteryNFT)
 }
 export const getLotteryV2Address = () => {
   return getAddress(addresses.lotteryV2)
+}
+export const getReferralAddress = () => {
+  return getAddress(addresses.referral)
 }
 export const getPancakeProfileAddress = () => {
   return getAddress(addresses.pancakeProfile)
