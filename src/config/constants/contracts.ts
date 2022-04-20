@@ -1,7 +1,7 @@
 export default {
   masterChef: {
     97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-    56: '0x3ae4688Cfe3c1B6746b8DF1e90c942c073B2D08E',
+    56: '0xbe69572b574165658251e19469Ec47AF26AC508F',
   },
   sousChef: {
     97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
@@ -11,6 +11,10 @@ export default {
     97: '0x99c2EcD51d52c036B00130d882Bc65f20Fdecf9f',
     56: '0x367A943Ef1547728f3e536DF512d80D6235CB124',
   },
+  newlottery: {
+    97: '',
+    56: '0x435885eE67DF51F35A107C8950d649bB1845D64c',
+  },
   lotteryNFT: {
     97: '0x8175c10383511b3a1C68f9dB222dc14A19CC950e',
     56: '0x5e74094Cd416f55179DBd0E45b1a8ED030e396A1',
@@ -18,6 +22,10 @@ export default {
   lotteryV2: {
     97: '0x4D8B718b4e617ea49bCe6B508c23353Cc7bADd28',
     56: '',
+  },
+  referral: {
+    97: '',
+    56: '0xeF058F4FB9901004ddF78a13E8a3E814F99e3535',
   },
   multiCall: {
     56: '0xfF6FD90A470Aaa0c1B8A54681746b07AcdFedc9B',
@@ -56,7 +64,7 @@ export default {
     97: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
   },
   cakeVault: {
-    56: '0xf56A2d4feE51f7B211ef7014d0d1982f3F28AD29',
+    56: '0x1B911cf2aDB1677AF9C58Cf65F1E3b071f8377F3',
     97: '',
   },
   predictions: {

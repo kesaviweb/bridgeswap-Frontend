@@ -5,48 +5,45 @@ import { Heading, Text, Button, Image, Card } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 
 
-const SlideImg = styled.img`
-    width: 400px;
+const SlideImg = styled(Image)`
+    width: 100px;
     height: 200px;
     ${({ theme }) => theme.mediaQueries.xs} {
-        width: 400px;
-        height: 200px;
+        height: 10px;
+        width: 200px;
     }
 
     ${({ theme }) => theme.mediaQueries.md} {
-        width: 400px;
-        height: 200px;
-    }
-
-    ${({ theme }) => theme.mediaQueries.lg} {
-        width: 600px;
-        height: 200px;
+        height: 100px;
+        width: 200px;
     }
 
 `
-
-
 const ComingSoon = () => {
 
     return (
         <Carousel 
         autoPlay
-        interval={2000}
+        interval={3000}
         infiniteLoop
         showArrows={false}
         showStatus={false}
         showIndicators={false}
-        width='100'        
+        width='50'        
         >
             <div>
-                <SlideImg src="/images/adverts/pools-coming-soon-big.svg" alt='Pools coming soon'/>
+                <SlideImg src="/images/adverts/pools-coming-soon.svg" width={300} height={150} alt='Pools coming soon'/>
+                {/* <p className="legend">Legend 1</p> */}
             </div>
             <div>
-                <SlideImg src="/images/adverts/farms-coming-soon-big.svg" alt='Farms coming soon'/>
+                <SlideImg src="/images/adverts/farms-coming-soon.svg" width={300} height={150} alt='Farms coming soon'/>
+                {/* <p className="legend">Legend 1</p> */}
             </div>
-            
+            {/* <div>
+                <Image src="assets/3.jpeg" width={800} height={400} alt='photo3' />
+                <p className="legend">Legend 3</p>
+            </div> */}
         </Carousel>
-    
     )
 }
 

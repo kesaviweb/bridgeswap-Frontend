@@ -13,7 +13,6 @@ import { getWeb3WithArchivedNodeProvider } from './web3'
 import { getBalanceAmount } from './formatBalance'
 import { BIG_TEN, BIG_ZERO } from './bigNumber'
 
-
 export const approve = async (lpContract, masterChefContract, account) => {
   return lpContract.methods
     .approve(masterChefContract.options.address, ethers.constants.MaxUint256)
@@ -21,19 +20,17 @@ export const approve = async (lpContract, masterChefContract, account) => {
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {
-  // if (pid === 0) {
-  //   return masterChefContract.methods
-  //     .enterStaking(new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
-  //     .send({ from: account, gas: DEFAULT_GAS_LIMIT })
-  //     .on('transactionHash', (tx) => {
-  //       return tx.transactionHash
-  //     })
-  // }
+  if (pid === 0) {
+    return masterChefContract.methods
+      .enterStaking(new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
+      .send({ from: account, gas: DEFAULT_GAS_LIMIT })
+      .on('transactionHash', (tx) => {
+        return tx.transactionHash
+      })
+  }
 
-  // the third argument of deposit() i.e referrer is supposed to be the referrer account
-  const referrer = "0xFd0522277d30bB29fB69268987019F254B98519c"
   return masterChefContract.methods
-    .deposit(pid, new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString(), referrer)
+    .deposit(pid, new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
     .send({ from: account, gas: DEFAULT_GAS_LIMIT })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
@@ -63,14 +60,14 @@ export const sousStakeBnb = async (sousChefContract, amount, account) => {
 }
 
 export const unstake = async (masterChefContract, pid, amount, account) => {
-  // if (pid === 0) {
-  //   return masterChefContract.methods
-  //     .leaveStaking(new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
-  //     .send({ from: account, gas: DEFAULT_GAS_LIMIT })
-  //     .on('transactionHash', (tx) => {
-  //       return tx.transactionHash
-  //     })
-  // }
+  if (pid === 0) {
+    return masterChefContract.methods
+      .leaveStaking(new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
+      .send({ from: account, gas: DEFAULT_GAS_LIMIT })
+      .on('transactionHash', (tx) => {
+        return tx.transactionHash
+      })
+  }
 
   return masterChefContract.methods
     .withdraw(pid, new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString())
