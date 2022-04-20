@@ -38,6 +38,7 @@
     "@emotion/styled": "^11.8.1",
     "@ethersproject/abi": "^5.1.2",
     "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.2",
     "@pancakeswap-libs/sdk": "1.0.1",
     "@pancakeswap/uikit": "0.37.0",
     "@reduxjs/toolkit": "^1.5.0",
